@@ -14,8 +14,10 @@ namespace С_String1
 
             var letterCount = 0;
             var lengthSentence = 0;
-            foreach (char symbolChar in sentence)
+
+            for (int i = 0; i < sentence.Length; i++)
             {
+                char symbolChar = sentence[i];
                 if (char.IsLetter(symbolChar))
                 {
                     letterCount += 1;
@@ -24,6 +26,7 @@ namespace С_String1
             }
 
             double percentage = ((double)letterCount / (double)lengthSentence) * 100;
+            percentage = Math.Round(percentage, 2);
             // Console.WriteLine($"Количество букв = : {letterCount}");
             // Console.WriteLine($"Длинна предложения  = : {lengthSentence}");
             return percentage;
