@@ -20,5 +20,15 @@ namespace С_String1.Tests
 
             Assert.AreEqual(-1, percentage);
         }
+
+        [TestMethod()]
+        public void PercentageLetters33perc()
+        {
+            var inputSentence = "333fff333";
+            var percentage = Logic.PercentageLetters(inputSentence);
+
+
+            Assert.AreEqual(33.33, percentage);
+        }
     }
 }
