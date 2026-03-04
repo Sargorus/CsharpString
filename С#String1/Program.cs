@@ -6,14 +6,14 @@ namespace С_String1
     {
         public static double PercentageLetters(string inputSentence)
         {
-            string sentence = inputSentence;
+            var sentence = inputSentence;
             if (string.IsNullOrEmpty(sentence))
             {
                 return -1; // будет кодом ошибки: путое предложение
             }
 
-            int letterCount = 0;
-            int lengthSentence = 0;
+            var letterCount = 0;
+            var lengthSentence = 0;
             foreach (char symbolChar in sentence)
             {
                 if (char.IsLetter(symbolChar))
@@ -36,11 +36,11 @@ namespace С_String1
         static void Main(string[] args)
         {
             Console.WriteLine("Введите предложение:");
-            string inputSentence = Console.ReadLine();
+            var inputSentence = Console.ReadLine();
 
-            double percentage = Logic.PercentageLetters(inputSentence);
+            var percentage = Logic.PercentageLetters(inputSentence);
 
-            Console.WriteLine($"Доля букв в предложении: {percentage} процентов");
+            Console.WriteLine($"Доля букв в предложении: {percentage} %");
         }
     }
 }
